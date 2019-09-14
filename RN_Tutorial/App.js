@@ -16,6 +16,16 @@ class HomeScreen extends React.Component {
   }
 }
 
+class ChatScreen extends React.Component {
+  render() {
+    return (
+      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <Text>Chat!</Text>
+      </View>
+    );
+  }
+}
+
 class SettingsScreen extends React.Component {
   render() {
     return (
@@ -29,15 +39,18 @@ class SettingsScreen extends React.Component {
 const TabNavigator = createBottomTabNavigator(
   {
     Home: HomeScreen,
+    Chat: ChatScreen,
     Settings: SettingsScreen,
   },
   {
     defaultNavigationOptions: ({navigation}) => ({
-      tabBarIcon: ({focused, horizontal, tintColor}) => {
+      tabBarIcon: ({horizontal, tintColor}) => {
         const {routeName} = navigation.state;
         let iconName;
         if (routeName === 'Home') {
           iconName = 'ios-home';
+        } else if (routeName === 'Chat') {
+          iconName = 'ios-chatboxes';
         } else if (routeName === 'Settings') {
           iconName = 'ios-settings';
         }
