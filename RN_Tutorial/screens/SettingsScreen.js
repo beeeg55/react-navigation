@@ -3,6 +3,9 @@ import React from 'react';
 import {Button, Text, View} from 'react-native';
 
 class SettingsScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Settings',
+  };
   render() {
     return (
       <View

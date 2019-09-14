@@ -3,6 +3,9 @@ import React from 'react';
 import {Text, View} from 'react-native';
 
 class ChatScreen extends React.Component {
+  static navigationOptions = {
+    headertitle: 'Chat',
+  };
   render() {
     return (
       <View

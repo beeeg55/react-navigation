@@ -2,7 +2,10 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
-export default class HomeScreen extends React.Component {
+class HomeScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Home',
+  };
   render() {
     return (
       <View
@@ -17,3 +20,4 @@ export default class HomeScreen extends React.Component {
     );
   }
 }
+export default HomeScreen;
