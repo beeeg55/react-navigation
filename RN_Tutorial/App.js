@@ -1,65 +1,10 @@
-/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Button, Text, View} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
-class HomeScreen extends React.Component {
-  render() {
-    return (
-      <View
-        style={{
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-          backgroundColor: '#ff4081',
-        }}>
-        <Text>Home!</Text>
-        <Button
-          title="Go to Settings"
-          onPress={() => this.props.navigation.navigate('Settings')}
-        />
-      </View>
-    );
-  }
-}
-
-class ChatScreen extends React.Component {
-  render() {
-    return (
-      <View
-        style={{
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-          backgroundColor: '#673ab7',
-        }}>
-        <Text>Chat!</Text>
-      </View>
-    );
-  }
-}
-
-class SettingsScreen extends React.Component {
-  render() {
-    return (
-      <View
-        style={{
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-          backgroundColor: '#228B22',
-        }}>
-        <Text>Settings!</Text>
-        <Button
-          title="Go to Home"
-          onPress={() => this.props.navigation.navigate('Home')}
-        />
-      </View>
-    );
-  }
-}
+import HomeScreen from './screens/HomeScreen';
+import ChatScreen from './screens/ChatScreen';
+import SettingsScreen from './screens/SettingsScreen';
 
 const TabNavigator = createBottomTabNavigator(
   {
