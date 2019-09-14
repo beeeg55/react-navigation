@@ -3,7 +3,8 @@ import React from 'react';
 import {Text, View} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+//import Ionicons from 'react-native-vector-icons/Ionicons';
+import Ionicons from 'react-native-ionicons';
 
 class HomeScreen extends React.Component {
   render() {
@@ -36,9 +37,9 @@ const TabNavigator = createBottomTabNavigator(
         const {routeName} = navigation.state;
         let iconName;
         if (routeName === 'Home') {
-          iconName = `ios-information-circle${focused ? '' : '-outline'}`;
+          iconName = 'ios-home';
         } else if (routeName === 'Settings') {
-          iconName = `ios-options${focused ? '' : '-outline'}`;
+          iconName = 'ios-settings';
         }
 
         // You can return any component that you like here! We usually use an
@@ -53,7 +54,7 @@ const TabNavigator = createBottomTabNavigator(
       },
     }),
     tabBarOptions: {
-      activeTintColor: 'tomato',
+      activeTintColor: 'blue',
       inactiveTintColor: 'gray',
     },
   },
